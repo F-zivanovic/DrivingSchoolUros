@@ -5,7 +5,6 @@
 - HTML5, CSS3, SCSS
 - Partials
 - Mixins, Partials, Variables
-- Variables
 - CSS Flexbox
 - Position layout
 - 100% Responsive
