@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $secondary-color;
+}
+
+a {
+    text-decoration: none;
+    transition: $transition-in;
+    color: white;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        transition: $transition-out;
+        outline: none;
+        color: $primary-color;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding: 70px 0px;
+}
+
+p {
+    font-size: 1rem;
+
+    @include breakpoints(576px) {
+        font-size: 0.8rem;
+    }
+}
+
+.container {
+    width: 90%;
+    margin: 0px auto;
+}
+
+.section-subtitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $secondary-color;
+
+    @include breakpoints(768px) {
+        font-size: 1.5rem;
+    }
+
+    @include breakpoints(576px) {
+        font-size: 1.3rem;
+    }
+
+}
+
+.section-title {
+    position: relative;
+    font-size: 0.9rem;
+    color: $primary-color;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+
+    &::after {
+        display: block;
+        content: "";
+        width: 80px;
+        height: 4px;
+        margin: 10px 0px;
+        background-image: url('../../assets/images/title-line.png');
+    }
+}
+
+.card {
+    @include btn($primary-color, $primary-color);
+    @include positioning(fixed, auto, 15px, 15px, auto);
+    z-index: 19;
+
+    &:hover {
+        background-color: white;
+        color: $primary-color;
+        transition: $transition-in;
+        transform: translateY(0px);
+    }
+
+    &__text {
+        text-transform: uppercase;
+        font-size: 0.9rem;
+    }
+}
+
+.card-info {
+    @include positioning(fixed, auto, -100%, 15px, auto);
+    transition: $transition-out;
+    background-color: $primary-color;
+    color: white;
+    padding: 10px;
+    z-index: 30;
+
+    &__icon {
+        @include positioning(absolute, 10px, 10px, auto, auto);
+        cursor: pointer;
+    }
+
+    &__body {
+
+        &__text {
+            font-weight: bold;
+
+            @include breakpoints(576px) {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    &.active {
+        right: 15px;
+    }
+}

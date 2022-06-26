@@ -1,0 +1,148 @@
+.contact {
+    background: url('../../assets/images/bg-2.jpg') center/cover no-repeat scroll;
+    height: auto;
+
+    &__header {
+        .section-subtitle {
+            color: white;
+        }
+    }
+
+    &__info {
+        @include flex(space-between, flex-start, row wrap);
+
+        &__item {
+            text-align: center;
+            flex: 0 0 30%;
+            margin-top: 30px;
+
+            @include breakpoints(576px) {
+                flex: 0 0 100%;
+            }
+
+            i {
+                color: $primary-color;
+                font-size: 2.5rem;
+
+                @include breakpoints(768px) {
+                    font-size: 2rem;
+                }
+            }
+
+            &__heading {
+                color: white;
+                font-size: 1.5rem;
+                margin: 10px 0px;
+
+                @include breakpoints(768px) {
+                    font-size: 1.2rem;
+                }
+            }
+
+            &__text {
+                color: white;
+
+                @include breakpoints(768px) {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+
+    &__form {
+        margin-top: 20px;
+
+        &-title {
+            margin-top: 30px;
+            font-size: 2rem;
+            color: white;
+
+            @include breakpoints(576px) {
+                font-size: 1.2rem;
+            }
+        }
+
+        &__body {
+            @include flex(space-between, center, row wrap);
+
+            @include breakpoints(992px) {
+                justify-content: center;
+            }
+
+            form {
+                flex: 0 0 45%;
+
+                @include breakpoints(992px) {
+                    flex: 0 0 80%;
+                }
+
+                @include breakpoints(576px) {
+                    flex: 0 0 100%;
+                }
+
+                .contact__form__input {
+                    padding: 15px;
+                    margin-top: 15px;
+                    width: 100%;
+                    outline: none;
+                    background: transparent;
+                    border: none;
+                    color: white;
+                    border: 2px solid $primary-color;
+
+                    &:focus,
+                    &:active {
+                        background: transparent;
+                    }
+
+                    &::placeholder {
+                        color: white;
+                        text-transform: uppercase;
+
+                        @include breakpoints(576px) {
+                            font-size: 0.9rem;
+                        }
+                    }
+
+                    @include breakpoints(576px) {
+                        font-size: 0.9rem;
+                    }
+                }
+
+                button[type="submit"] {
+                    @include btn(transparent, $primary-color);
+                    margin-top: 20px;
+                    display: inline-block;
+                }
+            }
+
+            &__map {
+                flex: 0 0 45%;
+
+                @include breakpoints(992px) {
+                    flex: 0 0 80%;
+                    margin-top: 25px;
+                }
+
+                @include breakpoints(576px) {
+                    flex: 0 0 100%;
+                }
+
+                #map {
+                    width: 100%;
+                    height: 400px;
+
+                    @include breakpoints(576px) {
+                        height: 300px;
+                    }
+                }
+            }
+
+            &__paragraph {
+                color: white;
+                margin-top: 10px;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

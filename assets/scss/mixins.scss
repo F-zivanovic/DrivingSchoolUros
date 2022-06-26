@@ -1,0 +1,44 @@
+@mixin flex($justify, $align, $flow) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-flow: $flow;
+}
+
+@mixin positioning($position, $top, $right, $bottom, $left, $width: auto, $height: auto) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    width: $width;
+    height: $height;
+}
+
+@mixin breakpoints($bp) {
+    @media(max-width:$bp) {
+        @content;
+    }
+}
+
+@mixin btn($bg, $bgBorder) {
+    font-weight: 700;
+    color: white;
+    background: $bg;
+    padding: 15px 25px;
+    border: 3px solid $bgBorder;
+    transition: $transition-in;
+    border-radius: 5px;
+    display: inline-block;
+
+    &:hover {
+        cursor: pointer;
+        transition: $transition-out;
+        transform: translateY(10px);
+    }
+
+    @media(max-width:576px) {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+}

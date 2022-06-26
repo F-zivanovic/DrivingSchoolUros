@@ -1,0 +1,63 @@
+.footer {
+    padding: 70px 0px;
+
+    &__body {
+        @include flex(space-between, flex-start, row wrap);
+
+        @media(max-width:992px) {
+            justify-content: center;
+        }
+
+        &__item {
+            flex: 0 0 22%;
+
+            @media(max-width:992px) {
+                flex: 0 0 40%;
+                margin-top: 20px;
+            }
+
+            @media(max-width:768px) {
+                flex: 0 0 100%;
+            }
+
+            &:first-child {
+                align-self: center;
+            }
+
+            &__logo {
+                color: $secondary-color;
+                font-size: 1.5rem;
+
+                &>span {
+                    color: $primary-color;
+                }
+            }
+
+            &__heading {
+                font-size: 1.4rem;
+                color: $primary-color;
+            }
+
+            &__list {
+
+                >li {
+                    margin-top: 5px;
+                    color: $secondary-color;
+
+                    a {
+                        color: $secondary-color;
+
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+
+                    i {
+                        color: $primary-color;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

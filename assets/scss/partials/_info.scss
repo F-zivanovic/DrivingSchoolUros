@@ -1,0 +1,58 @@
+.info {
+    padding-top: 0px;
+    padding-bottom: 70px;
+
+    &__body {
+        @include flex(center, center, row wrap);
+
+        .info__body__item {
+            position: relative;
+            flex: 0 0 100%;
+            margin-top: 15px;
+            border-radius: 15px;
+            border: 2px solid $primary-color;
+            padding: 20px;
+
+            &__header {
+                @include positioning(absolute, -20px, 10px, auto, auto);
+                color: $primary-color;
+                font-size: 5.5rem;
+
+                @include breakpoints(768px) {
+                    font-size: 4.5rem;
+                }
+
+                @include breakpoints(576px) {
+                    font-size: 3rem;
+                }
+            }
+
+            &__box {
+                @include flex(center, flex-start, column nowrap);
+
+                &__heading {
+                    text-transform: uppercase;
+                    z-index: 10;
+
+                    @include breakpoints(576px) {
+                        font-size: 0.9rem;
+                    }
+                }
+
+                &__text {
+                    text-align: justify;
+                    z-index: 10;
+                    margin-top: 10px;
+
+                    @include breakpoints(768px) {
+                        font-size: 0.9rem;
+                    }
+
+                    span {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

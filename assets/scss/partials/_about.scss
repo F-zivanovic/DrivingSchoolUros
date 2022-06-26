@@ -1,0 +1,87 @@
+.about {
+
+    &__body {
+        @include flex(space-evenly, center, row wrap);
+
+        @include breakpoints(992px) {
+            justify-content: center;
+        }
+
+        &__item {
+            flex: 0 0 45%;
+
+            &:first-child {
+                position: relative;
+
+                @include breakpoints(992px) {
+                    margin-bottom: 30px;
+                }
+
+                .about__body__item__icon {
+                    @include positioning(absolute, auto, auto, -30px, 0px, 100px);
+
+                    @include breakpoints(576px) {
+                        width: 60px;
+                    }
+                }
+            }
+
+            @include breakpoints(992px) {
+                flex: 0 0 80%;
+            }
+
+            @include breakpoints(576px) {
+                flex: 0 0 100%;
+            }
+
+            &__text {
+                text-align: justify;
+                margin: 10px 0px;
+            }
+
+            &__link {
+                color: $primary-color;
+                border: 2px solid #111;
+                border-radius: 30px;
+                padding: 5px;
+                font-weight: 700;
+                padding-right: 30px;
+                transition: $transition-in;
+                display: inline-block;
+                margin-top: 15px;
+                font-size: 1.1rem;
+
+                &:hover>i {
+                    background-color: white;
+                    color: $primary-color;
+                }
+
+                @include breakpoints(576px) {
+                    font-size: 0.9rem;
+                    padding-right: 20px;
+                }
+
+                i {
+                    display: inline-block;
+                    width: 50px;
+                    height: 50px;
+                    line-height: 50px;
+                    border-radius: 50%;
+                    background-color: $primary-color;
+                    color: white;
+                    margin-right: 20px;
+                    text-align: center;
+                    transition: $transition-in;
+
+                    @include breakpoints(576px) {
+                        margin-right: 10px;
+                        width: 45px;
+                        height: 45px;
+                        line-height: 45px;
+                    }
+                }
+            }
+
+        }
+    }
+}

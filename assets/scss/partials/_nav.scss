@@ -1,0 +1,147 @@
+.top-bar {
+    background-color: $secondary-color;
+    @include flex(space-around, center, row nowrap);
+    padding: 10px 0px;
+
+    @include breakpoints(992px) {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @include breakpoints(768px) {
+        display: none;
+    }
+
+    &__item {
+        color: white;
+        font-size: 0.9rem;
+
+        @include breakpoints(576px) {
+            font-size: 0.7rem;
+        }
+
+        &__icon {
+            color: $primary-color;
+            margin-right: 5px;
+        }
+
+        &:nth-child(3) {
+            @include breakpoints(992px) {
+                display: none
+            }
+        }
+    }
+}
+
+
+.nav {
+    @include flex(space-between, center, row nowrap);
+    padding: 20px 0px;
+
+    &__logo {
+        color: $secondary-color;
+        font-weight: 700;
+        font-size: 1.5rem;
+
+        @include breakpoints(576px) {
+            font-size: 1rem;
+        }
+
+        &:hover {
+            color: $primary-color;
+        }
+
+        &__span {
+            color: $primary-color;
+        }
+    }
+
+    &__list {
+        @include flex(center, center, row nowrap);
+
+        &__item {
+            padding: 0px 10px;
+
+            &__link {
+                color: $secondary-color;
+                font-weight: 600;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        @include breakpoints(992px) {
+            display: none;
+        }
+    }
+
+    &__hamburger {
+        font-size: 2rem;
+        cursor: pointer;
+        display: none;
+        color: $primary-color;
+
+        @include breakpoints(992px) {
+            display: block;
+        }
+
+        @include breakpoints(576px) {
+            font-size: 1.3rem;
+        }
+    }
+
+    &__mobile {
+        @include positioning(fixed, 0%, 0%, auto, auto, 350px, 100%);
+        @include flex(center, flex-end, column nowrap);
+        background-color: $secondary-color;
+        transition: $transition-in;
+        z-index: 25;
+
+        @media(min-width:992px) {
+            display: none;
+        }
+
+        @media(max-width:576px) {
+            width: 200px;
+        }
+
+        &__icon {
+            color: $primary-color;
+            @include positioning(fixed, 90px, 50px, auto, auto);
+            font-size: 2rem;
+            cursor: pointer;
+
+            @include breakpoints(768px) {
+                top: 30px;
+                right: 40px;
+            }
+
+            @include breakpoints(576px) {
+                font-size: 1.3rem;
+            }
+        }
+
+        &__list {
+            margin-right: 20px;
+
+            &__item {
+                padding: 10px 0px;
+                text-align: right;
+
+                &__link {
+                    font-weight: 600;
+
+                    @include breakpoints(576px) {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+
+        &.hidden {
+            transform: translateX(100%);
+        }
+    }
+}

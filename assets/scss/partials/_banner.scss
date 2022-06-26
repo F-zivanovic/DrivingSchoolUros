@@ -1,0 +1,65 @@
+.banner {
+    padding: 0px;
+    background: url('../../assets/images/header-bg.jpg') center/cover no-repeat scroll;
+    height: 100vh;
+    @include flex(center, flex-start, column nowrap);
+
+    @include breakpoints(768px) {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__body {
+        animation: bannerAnimation 1.5s ease-in-out;
+
+        &__subheading {
+            font-size: 1.5rem;
+            color: white;
+            text-transform: uppercase;
+
+            @include breakpoints(576px) {
+                font-size: 1.2rem;
+            }
+        }
+
+        &__heading {
+            font-size: 2.5rem;
+            font-style: italic;
+            color: white;
+            text-transform: uppercase;
+
+            @include breakpoints(576px) {
+                font-size: 1.5rem;
+            }
+        }
+
+        &__cta {
+            margin-top: 15px;
+
+            &__link {
+                &:first-child {
+                    @include btn($primary-color, $primary-color);
+                    margin-right: 10px;
+
+                    &:hover {
+                        background-color: transparent;
+                        border: 3px solid white;
+                    }
+
+                    @include breakpoints(576px) {
+                        margin-right: 0px;
+                    }
+                }
+
+                &:last-child {
+                    @include btn(none, white);
+
+                    &:hover {
+                        border: 3px solid $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}

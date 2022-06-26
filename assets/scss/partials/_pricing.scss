@@ -1,0 +1,89 @@
+.pricing {
+    background: url('../../assets/images/bg-2.jpg') center/cover no-repeat scroll;
+    height: auto;
+
+    &__header {
+
+        &>.section-subtitle {
+            color: white
+        }
+    }
+
+    &__body {
+        @include flex(space-between, flex-start, row wrap);
+
+        @include breakpoints(992px) {
+            justify-content: flex-start;
+        }
+
+        &__item {
+            margin-top: 20px;
+            flex: 0 0 45%;
+            color: white;
+
+            @include breakpoints(992px) {
+                flex: 0 0 60%;
+            }
+
+            @include breakpoints(576px) {
+                flex: 0 0 90%;
+            }
+
+            &__header {
+                background-color: $primary-color;
+                padding: 15px;
+                margin: 15px 0px;
+                font-weight: 700;
+                font-size: 1.3rem;
+                color: white;
+                text-transform: uppercase;
+
+                @include breakpoints(576px) {
+                    padding: 10px;
+                    font-size: 1rem;
+                }
+            }
+
+            &__list {
+
+                &-item {
+                    padding: 10px 0px;
+
+                    @include breakpoints(576px) {
+                        font-size: 0.9rem;
+                    }
+
+                    i {
+                        color: $primary-color;
+                        font-size: 1.2rem;
+                        margin-right: 5px;
+                    }
+                }
+            }
+
+            &__cta {
+                @include btn(transparent, $primary-color);
+                margin-top: 15px;
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+
+            &__link {
+                display: block;
+                padding: 10px 0px;
+
+                @include breakpoints(576px) {
+                    font-size: 0.9rem;
+                }
+
+                &__icon {
+                    margin-right: 5px;
+                    color: red;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
