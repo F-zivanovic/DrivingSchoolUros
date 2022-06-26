@@ -2,8 +2,7 @@
 
 ### Key Features:
 - PHP
-- HTML5, CSS3, SCSS
-- Partials
+- HTML5, CSS3, SCSS, JS
 - Mixins, Partials, Variables
 - CSS Flexbox
 - Position layout
