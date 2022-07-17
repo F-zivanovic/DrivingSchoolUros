@@ -145,7 +145,7 @@
     <section class="banner">
         <div class="banner__body container">
             <h3 class="banner__body__subheading">Najbolja opcija za vas</h3>
-            <h2 class="banner__body__heading">vozi bezbedno i uzmi dozvolu</h2>
+            <h2 class="banner__body__heading">vozi bezbedno i uzmi dozvolu <br> bez čekanja!</h2>
             <div class="banner__body__cta">
                 <a class="banner__body__cta__link" href="tel:+381604072016">Pozovite nas</a>
                 <a class="banner__body__cta__link" href="#online">Online upis</a>
@@ -159,11 +159,25 @@
 
     <!-- Advertising section -->
     <section class="advertising container">
-        <h3 class="advertising__heading" data-text="Nova škola u borči">Nova škola u borči</h3>
+        <h3 class="advertising__heading">Nova škola u borči</h3>
         <p class="advertising__paragraph">B KATEGORIJA</p>
         <p class="advertising__paragraph">PROMO CENA 70.000 RSD</p>
         <p class="advertising__paragraph">KOMPLETNA OBUKA</p>
-        <p class="advertising__paragraph">+ BESPLATNO LEKARSKO UVERENJE I PRVA POMOĆ</p>
+        <small>+ BESPLATNO LEKARSKO UVERENJE I PRVA POMOĆ</small>
+        <p class="advertising__paragraph">NOVA GRUPA TEORIJSKE NASTAVE KREĆE 01.08.2022.</p>
+        <p class="advertising__paragraph">Termini ispita:</p>
+        <div class="advertising__exam container">
+            <div class="advertising__exam-theory">
+                <h5>Teorijski ispit:</h5>
+                <p>02.08.2022.</p>
+                <p>17.08.2022.</p>
+            </div>
+            <div class="advertising__exam-intern">
+                <h5>Praktičan ispit:</h5>
+                <p>09.08.2022.</p>
+                <p>24.08.2022.</p>
+            </div>
+        </div>
         <a href="#online" class="advertising__link">Online upis</a>
     </section>
     <!-- Advertising section end -->

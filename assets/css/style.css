@@ -10,29 +10,6 @@ EXTERNAL FILES
   100% {
     opacity: 1;
     transform: scale(1); } }
-@keyframes flicker {
-  0% {
-    filter: blur(5px) brightness(0); }
-  3% {
-    filter: blur(5px) brightness(1); }
-  6% {
-    filter: blur(5px) brightness(0); }
-  7% {
-    filter: blur(5px) brightness(1); }
-  8% {
-    filter: blur(5px) brightness(0); }
-  9% {
-    filter: blur(5px) brightness(1); }
-  10% {
-    filter: blur(5px) brightness(0); }
-  20% {
-    filter: blur(5px) brightness(1); }
-  50% {
-    filter: blur(5px) brightness(1); }
-  99% {
-    filter: blur(5px) brightness(0); }
-  100% {
-    filter: blur(5px) brightness(1); } }
 * {
   box-sizing: border-box;
   margin: 0;
@@ -375,7 +352,6 @@ p {
   padding-bottom: 30px;
   text-transform: uppercase; }
   .advertising__heading {
-    position: relative;
     font-size: 5rem;
     font-weight: 800;
     color: #24a98e; }
@@ -385,12 +361,6 @@ p {
     @media (max-width: 768px) {
       .advertising__heading {
         font-size: 2rem; } }
-    .advertising__heading::before {
-      position: absolute;
-      content: attr(data-text);
-      text-shadow: 0px 0px 20px #24a98e;
-      animation: flicker 2.5s;
-      animation-iteration-count: infinite; }
   .advertising__paragraph {
     margin-top: 20px;
     font-weight: 600;
@@ -401,6 +371,19 @@ p {
     @media (max-width: 576px) {
       .advertising__paragraph {
         font-size: 1rem; } }
+  .advertising__exam {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap; }
+    .advertising__exam h5 {
+      font-size: 1.5rem;
+      margin-top: 20px; }
+      @media (max-width: 576px) {
+        .advertising__exam h5 {
+          font-size: 1.2rem; } }
+    .advertising__exam p {
+      font-weight: 700; }
   .advertising__link {
     font-weight: 700;
     color: white;
