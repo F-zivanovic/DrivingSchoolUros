@@ -3,6 +3,7 @@
 ### Key Features:
 - PHP
 - HTML5, CSS3, SCSS, JS
+- BEM methodology
 - Mixins, Partials, Variables
 - CSS Flexbox
 - Position layout
